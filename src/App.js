@@ -1,52 +1,68 @@
-import React from "react";
-// import ReactDom from "react-dom";
+import React, { useState } from "react";
+import Spinner from "./components/spinner";
+import Badger from "./components/badge";
+import Radio from "./components/radiobutton";
+import Text from "./components_header/Text";
+import Button from "./components_header/Button";
+import IconLeft from "./components_header/LeftIcon";
+import MenuLeft from "./components_header/MenuLeft";
 
-import Button from "./Button";
-import Header from "./components-header/Header";
-import Title from "./components-header/Title";
-import Subtitle from "./components-header/Subtitle";
-import Text from "./components-header/Text";
-import IconLeft from "./components-header/IconLeft";
-import IconMenu from "./components-header/IconMenu";
+import Card from "./components_card/card";
+import CardItem from "./components_card/cardItem";
 
-import "./App.css";
+import "./styles/App.css";
 
-export default function App() {
+function App() {
+  const [isAndroid, setIsAndroid] = useState(true);
+
+  const data = [
+    { title: "Text1", value: 1 },
+    { title: "Text2", value: 2 },
+  ];
+
   return (
     <div className="App">
-      {/* Header */}
-      <Header>Header</Header>
-      <Header android>Header</Header>
+      <button
+        className={!isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(false)}
+      >
+        IOS
+      </button>
+      <button
+        className={isAndroid ? "btnI" : "btnA"}
+        onClick={() => setIsAndroid(true)}
+      >
+        ANDROID
+      </button>
 
-      {/* Title */}
-      <Title>Title</Title>
-      <Title android>Title</Title>
+      <Text color="blue">Header</Text>
 
-      {/* Subtitle */}
-      <Subtitle>Subtitle</Subtitle>
-      <Subtitle android>Subtitle</Subtitle>
+      <MenuLeft ios={!isAndroid}></MenuLeft>
+      <IconLeft ios={!isAndroid}></IconLeft>
 
+      <Card>
+        <CardItem ios={!isAndroid} >
+        <Text >Header</Text>
+        </CardItem>
+        <CardItem ios={!isAndroid}>
+          <Text>Body</Text>
+        </CardItem>
+        <CardItem ios={!isAndroid} >
+          <Text>Footer</Text>
+        </CardItem>
+      </Card>
 
-      <Text>Back</Text>
-      <Text>Cancel</Text>
-      <Text android>Cancel</Text> 
+      <Button ios={!isAndroid} bordered color="danger">
+        <Text color="danger" size="14px" weight="500">
+          Danger
+        </Text>
+      </Button>
 
-      <IconLeft ></IconLeft>
-      <IconLeft ios></IconLeft>
-
-      <IconMenu android></IconMenu>
-
-      <Button light>Light</Button>
-      <Button lightAndroid>light</Button>
-
-      <Button info>Info</Button>
-
-      <Button primary>Primary</Button>
-      <Button primaryAndroid>Primary</Button>
-      {/* <Button success>Success</Button>
-      <Button warning>Warning</Button>
-      <Button danger>Danger</Button>
-      <Button dark>Dark</Button> */}
+      <Spinner ios={!isAndroid} color="blue" />
+      <Badger color="primary" count={5} />
+      <Radio ios={!isAndroid} data={data} color="green" />
     </div>
   );
 }
+
+export default App;

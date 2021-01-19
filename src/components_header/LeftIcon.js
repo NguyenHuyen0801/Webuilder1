@@ -7,16 +7,16 @@ const IconLeft = ({ ios }) => {
     fontSize: "19px",
     color: "#0a60ff",
   };
+
   let css = {
     fontSize: "19px",
-    color: "#fff",
-    backgroundColor: "#06a0ff",
+    color: "#ffffff",
   };
 
   if (ios) {
-    return <ArrowLeftOutlined style={css} />;
+    return <ArrowLeftOutlined style={cssIos} />;
   } else {
-    return <LeftOutlined style={cssIos} />;
+    return <LeftOutlined style={css} />;
   }
 };
 export default IconLeft;
