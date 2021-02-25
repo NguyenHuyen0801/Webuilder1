@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "./Text";
 
 const ColorButtonIos = {
   primary: "#0a60ff",
@@ -26,6 +25,8 @@ const ColorButtonAndroid = {
 
 //IOS
 const ButtonIos = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   box-shadow: 0px 2px #dddddd;
@@ -33,6 +34,8 @@ const ButtonIos = styled.button`
   border-radius: 5px;
 `;
 const ButtonIosTransparent = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   background-color: white;
@@ -40,6 +43,8 @@ const ButtonIosTransparent = styled.button`
   border-radius: 5px;
 `;
 const BorderedIos = styled.button`
+  display: block;
+  margin: 10px;
   border-width: 1px;
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -48,6 +53,8 @@ const BorderedIos = styled.button`
 `;
 
 const ButtonIosRounded = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   padding: 12px 14px;
@@ -56,6 +63,8 @@ const ButtonIosRounded = styled.button`
 
 //Android
 const ButtonAndroid = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   padding: 12px 14px;
@@ -65,6 +74,8 @@ const ButtonAndroid = styled.button`
 `;
 
 const ButtonAndroidTransparent = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   padding: 12px 14px;
@@ -74,6 +85,8 @@ const ButtonAndroidTransparent = styled.button`
 `;
 
 const BorderedAndroid = styled.button`
+  display: block;
+  margin: 10px;
   border-width: 1px;
   font-family: "Roboto", sans-serif;
   padding: 12px 14px;
@@ -82,6 +95,8 @@ const BorderedAndroid = styled.button`
   text-transform: uppercase;
 `;
 const ButtonAndroidRounded = styled.button`
+  display: block;
+  margin: 10px;
   border: none;
   font-family: "Roboto", sans-serif;
   padding: 12px 14px;

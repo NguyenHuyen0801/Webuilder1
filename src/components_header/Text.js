@@ -1,3 +1,4 @@
+
 import React from "react";
 import styled from "styled-components";
 
@@ -31,15 +32,26 @@ const TextBase = styled.div`
   color: ${(props) => props.color || "black"};
 `;
 
-function Text({ children, color, weight, size }) {
-  return (
-    <TextBase
-      style={{ color: ColorButtonIos[color] }}
-      weight={weight}
-      size={size}
-    >
-      <div>{children}</div>
-    </TextBase>
-  );
+function Text({ ios, children, color, weight, size }) {
+  if (ios) {
+    return (
+      <TextBase
+        style={{ color: ColorButtonIos[color] }}
+        weight={weight}
+        size={size}
+      >
+        <div>{children}</div>
+      </TextBase>
+    );
+  } else
+    return (
+      <TextBase
+        style={{ color: ColorButtonAndroid[color] }}
+        weight={weight}
+        size={size}
+      >
+        <div>{children}</div>
+      </TextBase>
+    );
 }
 export default Text;

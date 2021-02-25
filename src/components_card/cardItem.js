@@ -3,22 +3,21 @@ import "antd/dist/antd.css";
 import styled from "styled-components";
 import Text from "../components_header/Text";
 
-const cardBase = styled.div`
+const CardBase = styled.div`
   padding: 10px;
   color: black;
 `;
 
-const cardBorderedHeader = styled.div`
+const CardBorderedHeader = styled.div`
   color: black;
   padding: 10px;
-  border-bottom: none;
   border-top: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
 `;
-const cardBorderedFooter = styled.div`
-  border-top: none,
+const CardBorderedFooter = styled.div`
   padding: 10px;
+  border-top: none;
   border-bottom: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
@@ -26,10 +25,10 @@ const cardBorderedFooter = styled.div`
 `;
 const CardItem = ({ ios, children, bordered, header, footer, button }) => {
   if (bordered && header) {
-    return <cardBorderedHeader>{children}</cardBorderedHeader>;
+    return <CardBorderedHeader>{children}</CardBorderedHeader>;
   }
   if (bordered && footer) {
-    return <cardBorderedFooter>{children}</cardBorderedFooter>;
-  } else return <cardBase>{children}</cardBase>;
+    return <CardBorderedFooter>{children}</CardBorderedFooter>;
+  } else return <CardBase>{children}</CardBase>;
 };
 export default CardItem;

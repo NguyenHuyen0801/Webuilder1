@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowLeftOutlined, LeftOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
@@ -6,11 +7,15 @@ const IconLeft = ({ ios }) => {
   let cssIos = {
     fontSize: "19px",
     color: "#0a60ff",
+    margin: "40px"
+    
   };
 
   let css = {
     fontSize: "19px",
     color: "#ffffff",
+    backgroundColor: "#0a60ff",
+    margin: "40px"
   };
 
   if (ios) {

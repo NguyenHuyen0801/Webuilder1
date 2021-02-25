@@ -9,6 +9,7 @@ html{
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     width: 310px;
     height: 505px;
+    border: 1px solid #ddd;
     background-color: #fff;
     margin: 0px 550px;
 }
