@@ -51,7 +51,7 @@ function App() {
       
 
       {/* CARD */}
-      {/* <Card bordered >
+      <Card bordered >
         <CardItem bordered header>
           <Text ios={!isAndroid} color="primary" size="15px" weight="650">
             Social Applications
@@ -104,17 +104,17 @@ function App() {
            YouTube
           </Text>
           <Icon ios={!isAndroid} arrowRightListYouTube />
-        </CardItem> */}
+        </CardItem>
 
         {/* <CardItem button footer>
           <Text color="primary" size="15px" weight="650">
             Footer
           </Text>
         </CardItem> */}
-      {/* </Card> */}
+      </Card>
 
       {/* BUTTON */}
-      {/* <Button ios={!isAndroid} color="dark"> 
+      <Button ios={!isAndroid} color="dark"> 
       <Text ios={!isAndroid} weight="500" size="14px" color="white">
         Dark
       </Text>
@@ -153,9 +153,9 @@ function App() {
       <Text ios={!isAndroid} weight="500" size="14px" color="gray">
       Dark
       </Text>
-      </Button> */}
+      </Button>
 
-      {/* <Button ios={!isAndroid} full color="gray">
+      <Button ios={!isAndroid} full color="gray">
         <Text color="white" size="14px" weight="500">
         Dark
         </Text>
@@ -178,7 +178,7 @@ function App() {
           Next
         </Text>
         <Icon ios={!isAndroid} arrowRight />
-      </Button> */}
+      </Button>
 
       {/* SPINNER */}
       <Spinner ios={!isAndroid} color="blue" />
