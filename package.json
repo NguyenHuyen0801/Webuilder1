@@ -4,11 +4,12 @@
   "private": true,
   "homepage": "https://yondraco.github.io/website-builder/",
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
-    "antd": "^4.8.4",
+    "antd": "^4.15.1",
     "bootstrap": "^4.5.3",
     "customize-cra": "^1.0.0",
     "native-base": "^2.13.14",

@@ -11,6 +11,7 @@ const ColorButtonIos = {
   danger: "#d1494b",
   dark: "#000000",
   white: "#ffffff",
+  gray: "#A6A6A6"
 };
 
 const ColorButtonAndroid = {
@@ -22,11 +23,11 @@ const ColorButtonAndroid = {
   danger: "#d9534f",
   dark: "#000000",
   white: "#ffffff",
+  gray: "#A6A6A6"
 };
 
 const TextBase = styled.div`
   font-size: "Roboto", sans-serif;
-  margin-bottom: 0px;
   font-weight: ${(props) => props.weight || "550"};
   font-size: ${(props) => props.size || "19px"};
   color: ${(props) => props.color || "black"};
@@ -36,7 +37,7 @@ function Text({ ios, children, color, weight, size }) {
   if (ios) {
     return (
       <TextBase
-        style={{ color: ColorButtonIos[color] }}
+        style={{ color: ColorButtonIos[color]}}
         weight={weight}
         size={size}
       >

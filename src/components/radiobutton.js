@@ -2,15 +2,15 @@ import React from "react";
 import "antd/dist/antd.css";
 import "../styles/radio.css";
 
-function Radio({ os, data }) {
+function Radio({ ios, data }) {
   return (
     <form>
       <div className="list-group">
         {data.map((item) => (
           <>
             <input
-              type={`${os ? "checkbox" : "radio"}`}
-              name={`${os ? "CheckBoxInputName" :"RadioInputName"}`}
+              type={`${ios ? "checkbox" : "radio"}`}
+              name={`${ios ? "CheckBoxInputName" :"RadioInputName"}`}
               defaultValue={item.title}
               id={item.title}
             />

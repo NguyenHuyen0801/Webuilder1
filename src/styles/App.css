@@ -7,11 +7,12 @@ html{
 }
 .App{
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    width: 310px;
+    width: 320px;
     height: 505px;
-    border: 1px solid #ddd;
+    border:none;
     background-color: #fff;
     margin: 0px 550px;
+    align-items: center;
 }
 .btnA{
     color: white;
@@ -36,4 +37,8 @@ html{
     cursor: pointer;
     display: inline-block;
     margin: 10px 15px auto 12px;
+}
+
+.badge{
+    margin: 20px;
 }
