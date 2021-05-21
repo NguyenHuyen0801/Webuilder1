@@ -1,20 +1,11 @@
 import React from "react";
-import {
-  GooglePlusOutlined,
-  FacebookOutlined,
-  TwitterOutlined,
-  RedditOutlined,
-  LinkedinOutlined,
-  YoutubeOutlined,
-} from "@ant-design/icons";
-import "antd/dist/antd.css";
 import styled from "styled-components";
 
 const CardBase = styled.div`
+  width: 290px;
   display: flex;
   padding: 10px;
 `;
-
 const CardButton = styled.button`
   padding: 10px;
   display: flex;
@@ -46,6 +37,7 @@ const CardItem = ({
   button,
   body,
 }) => {
+
   if (bordered && header) {
     return <CardBorderedHeader>{children}</CardBorderedHeader>;
   }
@@ -72,6 +64,6 @@ const CardItem = ({
         {children}
       </CardButton>
     );
-  } else return <CardBase>{children}</CardBase>;
+  } else return <CardBase>{children}</CardBase>
 };
 export default CardItem;

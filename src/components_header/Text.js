@@ -15,7 +15,7 @@ const ColorButtonIos = {
 };
 
 const ColorButtonAndroid = {
-  primary: "#3f51b5",
+  primary: "#0a60ff",
   light: "#f4f4f4",
   info: "#62b1f6",
   success: "#5cb85c",

@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import Spinner from "./components/spinner";
 import Badger from "./components/badge";
 import Radio from "./components/radiobutton";
+
+import Header from "./components_header/Header";
 import Text from "./components_header/Text";
 import Button from "./Button";
 import Icon from "./components_header/Icon";
-import Title from "./components_header/Title";
-import Subtitle from "./components_header/SubTitle";
-import MenuLeft from "./components_header/MenuLeft";
 
 import Card from "./components_card/card";
 import CardItem from "./components_card/cardItem";
+import Left from "./components_card/Left";
+import Right from "./components_card/Right";
+
+import FooterIcons from "./footers/FooterIcons";
+import FooterIconsText from "./footers/FooterIconsAndText";
 
 import "./styles/App.css";
 
@@ -37,73 +41,88 @@ function App() {
         ANDROID
       </button>
 
-      {/* TEXT */}
-      {/* <Text ios={!isAndroid} color="primary">
-        Header
-      </Text> */}
-
-      {/* ICON HEADER */}
-      <MenuLeft ios={!isAndroid}></MenuLeft>
-      <Icon ios={!isAndroid} arrowRight></Icon>
-      <Icon ios={!isAndroid} arrowLeft></Icon>
-      <Title ios={!isAndroid}>Title</Title>
-      <Subtitle ios= {!isAndroid}>Subtitle</Subtitle>
-      
+      {/* HEADER */}
+      {/* <Header title ios={!isAndroid} />
+      <Header titleAndSub ios={!isAndroid} /> */}
+      <Header iconButton ios={!isAndroid} />
+      {/* <Header textButton ios={!isAndroid} />
+      <Header icon ios={!isAndroid} />
+      <Header iconText ios={!isAndroid} />
+      <Header multiIcon ios={!isAndroid} />  */}
 
       {/* CARD */}
-      <Card bordered >
+      <Card bordered>
         <CardItem bordered header>
           <Text ios={!isAndroid} color="primary" size="15px" weight="650">
             Social Applications
           </Text>
         </CardItem>
 
-        <CardItem >
-          <Icon googlePlus  />
-          <Text color="dark" size="15px" weight="500">
-           Google Plus
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListGoogle  />
+        <CardItem>
+          <Left>
+            <Icon googlePlus />
+            <Text color="dark" size="15px" weight="500">
+              Google Plus
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
-
-        <CardItem >
-          <Icon facebook />
-          <Text color="dark" size="15px" weight="500" >
-           facebook
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListFb />
+        <CardItem>
+          <Left>
+            <Icon facebook />
+            <Text color="dark" size="15px" weight="500">
+              facebook
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
-
-        <CardItem >
-          <Icon twitter />
-          <Text color="dark" size="15px" weight="500" >
-           Twitter
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListTwitter />
+        <CardItem>
+          <Left>
+            <Icon twitter />
+            <Text color="dark" size="15px" weight="500">
+              Twitter
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
-        
-        <CardItem >
-          <Icon reddit />
-          <Text color="dark" size="15px" weight="500" >
-           Reddit
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListReddit />
+        <CardItem>
+          <Left>
+            <Icon reddit />
+            <Text color="dark" size="15px" weight="500">
+              Reddit
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
-
-        <CardItem >
-          <Icon linkedIn />
-          <Text color="dark" size="15px" weight="500" >
-           LinkedIn
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListLinkIn />
+        <CardItem>
+          <Left>
+            <Icon linkedIn />
+            <Text color="dark" size="15px" weight="500">
+              LinkedIn
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
-
-        <CardItem >
-          <Icon youTube />
-          <Text color="dark" size="15px" weight="500" >
-           YouTube
-          </Text>
-          <Icon ios={!isAndroid} arrowRightListYouTube />
+        <CardItem>
+          <Left>
+            <Icon youTube />
+            <Text color="dark" size="15px" weight="500">
+              YouTube
+            </Text>
+          </Left>
+          <Right>
+            <Icon ios={!isAndroid} />
+          </Right>
         </CardItem>
 
         {/* <CardItem button footer>
@@ -114,7 +133,7 @@ function App() {
       </Card>
 
       {/* BUTTON */}
-      <Button ios={!isAndroid} color="dark"> 
+      {/* <Button ios={!isAndroid} color="dark"> 
       <Text ios={!isAndroid} weight="500" size="14px" color="white">
         Dark
       </Text>
@@ -171,23 +190,27 @@ function App() {
         <Text ios={!isAndroid} weight="550" size="15px" color="black">
           Back
         </Text>
-      </Button>
+      </Button> */}
 
-      <Button ios={!isAndroid} iconRight color="light">
+      {/* <Button ios={!isAndroid} iconRight color="light">
         <Text ios={!isAndroid} weight="550" size="15px" color="black">
           Next
         </Text>
         <Icon ios={!isAndroid} arrowRight />
-      </Button>
+      </Button> */}
 
       {/* SPINNER */}
-      <Spinner ios={!isAndroid} color="blue" />
+      <Spinner ios={!isAndroid} color="red" />
 
       {/* BADGE */}
-      <Badger color="primary" count={5} />
+      {/* <Badger color="primary" count={5} /> */}
 
       {/* REAIO */}
-      <Radio ios={!isAndroid} data={data} color="green" />
+      {/* <Radio ios={!isAndroid} data={data} color="green" /> */}
+
+      {/* FOOTER */}
+      {/* <FooterIcons ios={!isAndroid} /> */}
+      <FooterIconsText ios={!isAndroid} />
     </div>
   );
 }

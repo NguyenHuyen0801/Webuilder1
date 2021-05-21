@@ -27,21 +27,17 @@ const Icon = ({
   facebook,
   linkedIn,
   youTube,
-  arrowRightListFb,
-  arrowRightListGoogle,
-  arrowRightListTwitter,
-  arrowRightListReddit,
-  arrowRightListLinkIn,
-  arrowRightListYouTube,
 }) => {
-  //css icon left
+  //css icon right trong card
   let cssIos = {
-    color: "#0a60ff",
-    fontSize: "19px",
+    color: "#C4C4C4",
+    fontSize: "15px",
+    paddingTop: "3px",
   };
   let cssAndroid = {
-    color: "white",
-    fontSize: "19px",
+    color: "#C4C4C4",
+    fontSize: "15px",
+    paddingTop: "3px",
   };
 
   //css icon left, right button
@@ -69,74 +65,29 @@ const Icon = ({
     color: "#3f51b5",
   };
 
-  //css icon right card (arrowRight)
-  let cssArrowIosListGoogle = {
-    margin: "3px",
-    marginLeft: "143px",
-    color: "gray",
-    fontSize: "15px",
-  }
-  let cssArrowIosListFb = {
-    ...cssArrowIosListGoogle,
-    marginLeft: "162px",
-  };
-  let cssArrowIosListTwitter = {
-    ...cssArrowIosListGoogle,
-    marginLeft: "175px",
-  };
-  let cssArrowIosListReddit = {
-    ...cssArrowIosListGoogle,
-    marginLeft: "179px",
-  };
-
-  let cssArrowIosListLinkIn = {
-    ...cssArrowIosListGoogle,
-    marginLeft: "165px",
-  };
-
-  let cssArrowIosListYouTube = {
-    ...cssArrowIosListGoogle,
-    marginLeft: "165px",
-  };
-
   //css cardItemIcon left
   let cssGooglePlus = {
-    color: "red",
+    color: "#D23B37",
     marginRight: "5px",
-    fontSize: "20px",
+    fontSize: "25px",
   };
 
   let cssFb = {
     ...cssGooglePlus,
-    color: "blue",
+    color: "#2D428B",
   };
 
   let cssTwitter = {
+    fontSize: "27px",
     marginRight: "5px",
-    fontSize: "22px",
-    color: "blue",
+    color: "#469AE9",
   };
-
-  let cssReddit = {
+  let cssLinkIn = {
     ...cssGooglePlus,
+    color: "#0D66A7",
   };
-
-  let cssYoutube = {
-    ...cssGooglePlus,
-  };
-
-  //Icon trong button
-  if (arrowLeft) {
-    if (ios) {
-      return <LeftOutlined style={cssArrowIos} />;
-    } else {
-      return <ArrowLeftOutlined style={cssArrowIos} />;
-    }
-  }
-  if (arrowRight) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIos} />;
-    } else return <ArrowRightOutlined style={cssArrowIos} />;
+  let cssYouTube = {
+    ...cssGooglePlus, color: "#CA101E",
   }
 
   //icon left trong card
@@ -150,55 +101,36 @@ const Icon = ({
     return <FacebookFilled style={cssFb} />;
   }
   if (reddit) {
-    return <RedditOutlined style={cssReddit} />;
+    return <RedditOutlined style={cssGooglePlus} />;
   }
   if (linkedIn) {
-    return <LinkedinFilled  style={cssReddit} />;
+    return <LinkedinFilled style={cssLinkIn} />;
   }
   if (youTube) {
-    return <YoutubeFilled  style={cssReddit} />;
+    return <YoutubeFilled style={cssYouTube} />;
   }
-
-  //ArrowRightCard
-  if (arrowRightListGoogle) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListGoogle} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListGoogle} />;
-  }
-  if (arrowRightListFb) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListFb} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListFb} />;
-  }
-  if (arrowRightListTwitter) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListTwitter} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListTwitter} />;
-  }
-  if (arrowRightListReddit) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListReddit} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListReddit} />;
-  }
-  if (arrowRightListLinkIn) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListLinkIn} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListLinkIn} />;
-  }
-  if (arrowRightListYouTube) {
-    if (ios) {
-      return <RightOutlined style={cssArrowIosListYouTube} />;
-    } else return <ArrowRightOutlined style={cssArrowIosListYouTube} />;
-  }
-
   //icon button
-  if (home) {
-    return <HomeFilled style={cssHome} />;
-  }
   if (work) {
     if (ios) {
       return <ShoppingTwoTone style={cssWorkIos} />;
     } else return <ShoppingTwoTone style={cssWorkAndroid} />;
   }
+  if (home) {
+    return <HomeFilled style={cssHome} />;
+  }
+  if (arrowLeft) {
+    if (ios) {
+      return <LeftOutlined style={cssArrowIos} />;
+    } else {
+      return <ArrowLeftOutlined style={cssArrowIos} />;
+    }
+  }
+  if (arrowRight) {
+    if (ios) {
+      return <RightOutlined style={cssArrowIos} />;
+    } else return <ArrowRightOutlined style={cssArrowIos} />;
+  } else if (ios) {
+    return <RightOutlined style={cssIos} />;
+  } else return <ArrowRightOutlined style={cssAndroid} />;
 };
 export default Icon;
